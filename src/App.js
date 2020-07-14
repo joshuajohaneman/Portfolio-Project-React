@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
+import HeaderComp from './Header';
+import HomeComp from './Home';
+import IndexComp from './mIndex';
+import FooterComp from './Footer';
+import MUSHROOMS from './Mushrooms';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
+import { Container, Row, Col, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Button } from 'reactstrap';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mushrooms: MUSHROOMS,
+    }
+  }
+
+  render() {
+    return (
+      <Router>
+        <div>
+          <HeaderComp />
+          <Switch>
+            <Route exact path='/' component={HomeComp} />
+            <Route path='/index' render={() => IndexComp(this.state.mushrooms)} />
+            <Redirect to='/' />
+          </Switch>
+          <FooterComp />
+        </div>
+      </Router>
+    )
+  }
 }
+
 
 export default App;
