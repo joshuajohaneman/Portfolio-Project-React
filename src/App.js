@@ -3,6 +3,7 @@ import HeaderComp from './Header';
 import HomeComp from './Home';
 import IndexComp from './mIndex';
 import FooterComp from './Footer';
+import MushroomComp from './Mushroom';
 import MUSHROOMS from './Mushrooms';
 import {
   BrowserRouter as Router,
@@ -31,6 +32,9 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={HomeComp} />
             <Route path='/index' render={() => IndexComp(this.state.mushrooms)} />
+            <Route path='/mushroom/:id' 
+              render={(routeProps) => <MushroomComp {... routeProps} {...this.state}/>}
+            />
             <Redirect to='/' />
           </Switch>
           <FooterComp />
