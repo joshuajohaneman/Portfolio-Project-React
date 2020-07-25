@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Navbar, Collapse, NavbarBrand, NavbarToggler, NavItem, NavLink, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 class FooterComp extends React.Component { 
     constructor(props) {

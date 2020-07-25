@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardHeader, CardImg, CardText, CardTitle, CardBody, Container, Row, Col, Jumbotron, Navbar, Collapse, NavbarBrand, NavbarToggler, NavItem, NavLink, Button } from 'reactstrap';
-import { useHistory } from "react-router-dom";
+import { Button, Card, CardHeader, CardImg, CardText, CardTitle, CardBody, Container, Row, Col, Jumbotron } from 'reactstrap';
+
 
 function MushroomComp(props) {
         const mushroom = props.mushrooms.filter(mushroom => mushroom.id == props.match.params.id)[0];
@@ -9,8 +9,14 @@ function MushroomComp(props) {
         if (mushroom) return (
             <Jumbotron>
             <Container>
-            <Row className="row-content">
+            <Row className="mx-auto text-center mb-3">
                 <Col>
+                <Button className="" onClick={props.history.goBack}>Go Back</Button>
+                </Col>
+            </Row>
+            <Row className="">
+                <Col>
+              
                 <Card className="mushCard mx-auto">
                 <CardImg variant="top" className="img-thumbnail" src={require(`${mushroom.image}`)} alt="Card image cap" />
                                 <CardHeader className="card-attr">

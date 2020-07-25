@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header, Jumbotron, Container, Row, Col } from 'reactstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { Jumbotron, Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function generateShroom(mushroom) {
 

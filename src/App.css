@@ -7,7 +7,7 @@
 }
 
 .navbar-mushy { 
-        background-image: linear-gradient(rgba(220,0,0,0.4), rgba(150, 0, 0, 0.8));
+        background-image: linear-gradient(rgba(190,0,1), rgba(160, 0, 0, 1));
         background-position: 0 0, 50px 50px;
        
         box-shadow: 0 8px 6px -6px #999;

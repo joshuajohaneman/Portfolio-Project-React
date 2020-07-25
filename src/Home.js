@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Jumbotron, Navbar, Collapse, NavbarBrand, NavbarToggler, NavItem, NavLink, Button } from 'reactstrap';
+import { Container, Row, Col, Jumbotron } from 'reactstrap';
 
 function HomeComp(props) {
         return (
